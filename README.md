@@ -1,11 +1,19 @@
 # Brew Beans — DataOps (projet de la promotion)
 
-Projet pédagogique fictif destiné à l'initiation à Git, GitHub et Markdown.
+Projet pédagogique fictif d’initiation à Git, GitHub, Markdown et à la collaboration entre Analytics Engineers.
 
-Les binômes travaillent sur des branches individuelles (`groupe-01`, `groupe-02`, etc.). Les contributions sont proposées par Pull Request vers `main` après vérification.
+## Organisation des contributions
 
-## Répertoire des contributions
+- Une branche par binôme, au format `nompromo_groupeN` (exemple : `daft-ft-21_groupe1`).
+- Données de travail : `data/groupeN/ventes.csv`.
+- Contrôle Bash : `scripts/groupeN/controle_ventes.sh`.
+- Documentation : `docs/groupeN/README.md`.
+- Références communes à préserver : `data/reference/`.
 
-Chaque groupe ajoute ses données fictives dans `data/groupe-NN/`, son contrôle dans `scripts/groupe-NN/` et son README dans `docs/groupe-NN/`.
+Les groupes proposent les modifications par **Pull Request** vers la branche protégée `main`. La revue et la fusion sont réalisées par le responsable du dépôt.
 
-> Ce dépôt ne doit jamais contenir de données clients réelles, de mots de passe ni de jetons d'accès.
+## Données de référence
+
+Le siège fournit `data/reference/ventes_reference.csv` et `data/reference/magasins.csv` (données fictives). Ne modifiez pas les originaux lors des ateliers : travaillez dans le dossier attribué à votre groupe.
+
+> Aucun jeu de données réel, secret, mot de passe ou jeton d’accès ne doit être commité.
