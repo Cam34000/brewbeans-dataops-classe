@@ -1,19 +1,31 @@
-# Brew Beans — DataOps (projet de la promotion)
+# Brew Beans — DataOps (DAFT-FT-21)
 
-Projet pédagogique fictif d’initiation à Git, GitHub, Markdown et à la collaboration entre Analytics Engineers.
+Projet pédagogique fictif : apprendre Git, GitHub et Markdown en travaillant sur des ventes de cafés.
 
-## Organisation des contributions
+## Références communes
 
-- Une branche par binôme, au format `nompromo_groupeN` (exemple : `daft-ft-21_groupe1`).
-- Données de travail : `data/groupeN/ventes.csv`.
-- Contrôle Bash : `scripts/groupeN/controle_ventes.sh`.
+- `data/reference/ventes_reference.csv` : **40 transactions** historiques (ne pas modifier).
+- `data/reference/magasins.csv` : référentiel des magasins.
+- `data/livraisons/livraison_paris_20261026.csv` : **3 nouvelles transactions**, dont `BB-041` est enregistrée à **40,00 EUR** avant correction officielle à **45,00 EUR**.
+- `scripts/reference/preparer_ventes.py` : script pandas de départ à copier, puis à compléter.
+
+## Travail par binôme
+
+- Branche : `nompromo_groupeN` (exemple : `daft-ft-21_groupe1`).
+- Données produites : `data/groupeN/livraison_corrigee.csv` et `data/groupeN/ventes.csv`.
+- Script Python pandas : `scripts/groupeN/preparer_ventes.py`.
 - Documentation : `docs/groupeN/README.md`.
-- Références communes à préserver : `data/reference/`.
 
-Les groupes proposent les modifications par **Pull Request** vers la branche protégée `main`. La revue et la fusion sont réalisées par le responsable du dépôt.
+Les groupes publient leur branche, puis proposent une **Pull Request** vers `main` ; aucune modification directe de `main`.
 
-## Données de référence
+## Conditions d'exécution
 
-Le siège fournit `data/reference/ventes_reference.csv` et `data/reference/magasins.csv` (données fictives). Ne modifiez pas les originaux lors des ateliers : travaillez dans le dossier attribué à votre groupe.
+Depuis la racine du dépôt, avec Python et pandas installés :
 
-> Aucun jeu de données réel, secret, mot de passe ou jeton d’accès ne doit être commité.
+```bash
+python scripts/groupe1/preparer_ventes.py
+```
+
+Cette commande n'est utilisable qu'après la préparation des fichiers du groupe. Remplacer `groupe1` pour les autres binômes et adapter la constante `GROUPE` du script.
+
+Les données sont entièrement fictives. Ne pas publier de données clients réelles ni de secrets.
